@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,body{
+            height: 100%;
+        }
+        div{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="floatimg">
+        <img src="image/i1.jpg" width="100px" height="100px" alt="">
+    </div>
+    <script language="javascript" type="text/javascript">
+          var floatimg=document.getElementById("floatimg");
+        
+        //定义初识坐标
+          var x=0,y=0;
+        
+        //获取图片随机浮动的可见范围
+          var w=document.body.clientWidth-100;
+          var h=document.body.clientHeight-100;
+          console.log(w);
+          console.log(h);  
+
+          function picfloat(){
+        //定义图片随机出现的坐标
+        
+             x=Math.random()*w;
+             y=Math.random()*h;
+            
+               floatimg.style.left=x+"px";
+               floatimg.style.top=y+"px";
+        
+        //设置间隔时间
+               setTimeout("picfloat()",500);
+               
+        }
+           picfloat();
+        </script>
+        
+</body>
+</html>
