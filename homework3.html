@@ -145,9 +145,15 @@
           list-style: none;
         }
 
+        .myCanvas{
+        float:left;
+        background:rgba(0,0,0,0);
+ }
+
     </style>
 </head>
 <body>
+    <canvas id="myCanvas" class="myCanvas"> </canvas>
      <div id="div1">
          <p></p>
          <div id="div3">
@@ -232,5 +238,74 @@ function autoRun(){
 }
 timer = setInterval(autoRun, periodTime); 
     </script>
+
+<script>
+    //获取屏幕最大长宽
+     var maxWidth = document.documentElement.clientWidth;
+     var maxHeight = document.documentElement.clientHeight;
+     //获取canvas画布
+     var canvasObj = document.getElementById('myCanvas');
+     //将屏幕的长宽赋给画布
+     canvasObj.width = maxWidth;
+     canvasObj.height = maxHeight;
+     //创建雪花图形(白色的圆形)
+     var cxt = canvasObj.getContext('2d');
+     //设置雪花的个数
+     var snowCount = 100;
+     var objArray = [];
+     for(var index = 0;index < snowCount; index++){
+      objArray.push({
+        //随机x轴位置
+        x : Math.random()*maxWidth,
+        //随机y轴位置
+        y : Math.random()*maxHeight,
+        //随机半径大小
+        r : Math.random()*4+1,
+        //画圆
+        drow : function() {
+        cxt.beginPath();
+          //填充色
+          cxt.fillstyle = "#fff";
+          //填充
+          cxt.fill();
+          //圆的属性
+          cxt.arc(this.x,this.y,this.r,0,2*Math.PI);
+          //输出圆
+          cxt.stroke();
+        }
+     });
+    }
+     function drawSnow() {
+      cxt.clearRect(0,0,maxWidth,maxHeight)
+       //清除0x轴，0y轴，最大屏幕x轴，最大屏幕y轴的圆形
+       for(var index = 0; index<objArray.length; index++) {
+        //把每个圆都画出来
+         objArray[index].drow();
+       }
+       downLoadSnow()
+       //调用雪花移动效果
+     }
+     function downLoadSnow() {
+      for(var index = 0;index<objArray.length;index++){
+        if(objArray[index].x > maxWidth) {
+          objArray[index].x = 0;
+           //当移动的位置大于最大屏幕宽度时返回到0
+          } else {
+           objArray[index].x +=5;
+            //否则一直加下去
+          }
+          if(objArray[index].y > maxHeight) {
+            objArray[index].y = 0;
+            //当移动的位置大于最大屏幕高度时返回0
+          } else {
+            objArray[index].y +=5;
+            //否则一直加下去
+          }
+        }
+     }
+    setInterval("drawSnow()",30);
+    //调用计时器
+   </script>
+   
 </body>
 </html>
