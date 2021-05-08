@@ -18,11 +18,27 @@
     <div id="floatimg">
         <img src="image/i1.jpg" width="100px" height="100px" alt="">
     </div>
+    <div id="floatimg1">
+        <img src="image/i2.jpg" width="100px" height="100px" alt="">
+    </div>
+    <div id="floatimg2">
+        <img src="image/i3.jpg" width="100px" height="100px" alt="">
+    </div>
+    <div id="floatimg3">
+        <img src="image/i5.jpg" width="100px" height="100px" alt="">
+    </div>
+
     <script language="javascript" type="text/javascript">
           var floatimg=document.getElementById("floatimg");
+          var floatimg1=document.getElementById("floatimg1");
+          var floatimg2=document.getElementById("floatimg2");
+          var floatimg3=document.getElementById("floatimg3");
         
         //定义初识坐标
           var x=0,y=0;
+          var x1=0,y1=0;
+          var x2=0,y2=0;
+          var x3=0,y3=0;
         
         //获取图片随机浮动的可见范围
           var w=document.body.clientWidth-100;
@@ -35,9 +51,20 @@
         
              x=Math.random()*w;
              y=Math.random()*h;
-            
-               floatimg.style.left=x+"px";
-               floatimg.style.top=y+"px";
+             x1=Math.random()*w;
+             y1=Math.random()*h;
+             x2=Math.random()*w;
+             y2=Math.random()*h;
+             x3=Math.random()*w;
+             y3=Math.random()*h;
+             floatimg.style.left=x+"px";
+             floatimg.style.top=y+"px";
+             floatimg1.style.left=x1+"px";
+             floatimg1.style.top=y1+"px";
+               floatimg2.style.left=x2+"px";
+               floatimg2.style.top=y2+"px";
+        floatimg3.style.left=x3+"px";
+               floatimg3.style.top=y3+"px";
         
         //设置间隔时间
                setTimeout("picfloat()",500);
