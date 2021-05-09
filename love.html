@@ -12,9 +12,13 @@
         }
         html,body{
             height: 100%;
+            background-color:rgb(255, 154, 205);
         }
         div{
             position: absolute;
+            overflow: hidden;
+            border-radius: 50px;
+            border:rgb(40, 113, 248) 3px solid;
         }
     </style>
 </head>
@@ -38,46 +42,23 @@
           var floatimg2=document.getElementById("floatimg2");
           var floatimg3=document.getElementById("floatimg3");
         
-        //定义初识坐标
-          var x=0,y=0;
-          var x1=0,y1=0;
-          var x2=0,y2=0;
-          var x3=0,y3=0;
-        
+         
         //获取图片随机浮动的可见范围
           var w=document.body.clientWidth-100;
           var h=document.body.clientHeight-100;
           console.log(w);
           console.log(h);  
 
-          function picfloat(){
-        //定义图片随机出现的坐标
-        
-             x=Math.random()*w;
-             y=Math.random()*h;
-        //      x1=Math.random()*w;
-        //      y1=Math.random()*h;
-        //      x2=Math.random()*w;
-        //      y2=Math.random()*h;
-        //      x3=Math.random()*w;
-        //      y3=Math.random()*h;
-             floatimg.style.left=x+"px";
-             floatimg.style.top=y+"px";
-        //      floatimg1.style.left=x1+"px";
-        //      floatimg1.style.top=y1+"px";
-        //        floatimg2.style.left=x2+"px";
-        //        floatimg2.style.top=y2+"px";
-        // floatimg3.style.left=x3+"px";
-        //        floatimg3.style.top=y3+"px";
-        
-        //设置间隔时间
-               setTimeout("picfloat()",500);
-               
-        }
-        var mx=Math.random()*2,my=Math.random()*2;
-        var mx1=Math.random()*2,my1=Math.random()*2;
-        var mx2=Math.random()*2,my2=Math.random()*2;
-        var mx3=Math.random()*2,my3=Math.random()*2;
+        //定义初识坐标
+          var x=Math.random()*w,y=Math.random()*h;
+          var x1=Math.random()*w,y1=Math.random()*h;
+          var x2=Math.random()*w,y2=Math.random()*h;
+          var x3=Math.random()*w,y3=Math.random()*h;
+       
+        var mx=Math.random()*2+1,my=Math.random()*2+1;
+        var mx1=Math.random()*2+1,my1=Math.random()*2+1;
+        var mx2=Math.random()*2+1,my2=Math.random()*2+1;
+        var mx3=Math.random()*2+1,my3=Math.random()*2+1;
 
         function move(){
           x += mx;
@@ -90,67 +71,67 @@
           y3 += my3;
           if(x>w){
               x = w;
-              mx = Math.random()*2*-1;
+              mx = Math.random()*2*-1-1;
           }
           if(y>h){
               y = h;
-              my = Math.random()*2*-1;
+              my = Math.random()*2*-1-1;
           }
           if(x<0){
               x = 0;
-              mx = Math.random()*2;
+              mx = Math.random()*2+1;
           }
           if(y<0){
               y = 0;
-              my = Math.random()*2;
+              my = Math.random()*2+1;
           }
           if(x1>w){
               x1 = w;
-              mx1 = Math.random()*2*-1;
+              mx1 = Math.random()*2*-1-1;
           }
           if(y1>h){
               y1= h;
-              my1 = Math.random()*2*-1;
+              my1 = Math.random()*2*-1-1;
           }
           if(x1<0){
               x1 = 0;
-              mx1 = Math.random()*2;
+              mx1 = Math.random()*2+1;
           }
           if(y1<0){
               y1 = 0;
-              my1 = Math.random()*2;
+              my1 = Math.random()*2+1;
           }
           if(x2>w){
               x2 = w;
-              mx2 = Math.random()*2*-1;
+              mx2 = Math.random()*2*-1-1;
           }
           if(y2>h){
               y2 = h;
-              my2 = Math.random()*2*-1;
+              my2 = Math.random()*2*-1-1;
           }
           if(x2<0){
               x2 = 0;
-              mx2 = Math.random()*2;
+              mx2 = Math.random()*2+1;
           }
           if(y2<0){
               y2 = 0;
-              my2 = Math.random()*2;
+              my2 = Math.random()*2+1;
           }
           if(x3>w){
               x3 = w;
-              mx3 = Math.random()*2*-1;
+              mx3 = Math.random()*2*-1-1;
           }
           if(y3>h){
               y3 = h;
-              my3 = Math.random()*2*-1;
+              my3 = Math.random()*2*-1-1;
           }
           if(x3<0){
               x3 = 0;
-              mx3 = Math.random()*2;
+              mx3 = Math.random()*2+1;
           }
           if(y3<0){
               y3 = 0;
-              my3 = Math.random()*2;
+              my3 = Math.random()*2+1;
           }
           floatimg.style.left=x+"px";
           floatimg.style.top=y+"px";
@@ -164,7 +145,7 @@
 
         }
         move();
-          // picfloat();
+         
         </script>
         
 </body>
