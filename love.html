@@ -12,28 +12,31 @@
         }
         html,body{
             height: 100%;
-            background-color:rgb(255, 154, 205);
+            background-color:rgb(196, 247, 234);
         }
         div{
             position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: rgb(255, 29, 236);
             overflow: hidden;
             border-radius: 50px;
-            border:rgb(40, 113, 248) 3px solid;
+            border:rgb(40, 113, 248) 1px solid;
         }
     </style>
 </head>
 <body>
     <div id="floatimg">
-        <img src="image/i1.jpg" width="100px" height="100px" alt="">
+        <img src="image/i1.jpg" width="20px" height="20px" alt="">
     </div>
     <div id="floatimg1">
-        <img src="image/i2.jpg" width="100px" height="100px" alt="">
+        <img src="image/i2.jpg" width="20px" height="20px" alt="">
     </div>
     <div id="floatimg2">
-        <img src="image/i3.jpg" width="100px" height="100px" alt="">
+        <img src="image/i3.jpg" width="20px" height="20px" alt="">
     </div>
     <div id="floatimg3">
-        <img src="image/i5.jpg" width="100px" height="100px" alt="">
+        <img src="image/i5.jpg" width="20px" height="20px" alt="">
     </div>
 
     <script language="javascript" type="text/javascript">
@@ -44,8 +47,8 @@
         
          
         //获取图片随机浮动的可见范围
-          var w=document.body.clientWidth-100;
-          var h=document.body.clientHeight-100;
+          var w=document.body.clientWidth-20;
+          var h=document.body.clientHeight-20;
           console.log(w);
           console.log(h);  
 
