@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    html,body{
+        height: 100%;
+    }
+</style>
+<body>
+    
+    <script>
+        function creatdiv(i){
+            var div = document.createElement('div');
+            div.id = 'div'+i;
+            div.style.width = '20px';
+            div.style.height = '20px';
+            div.style.backgroundColor = 'blue';
+            div.style.borderRadius = '10px';
+            div.style.position = 'absolute';
+            var w = document.body.clientWidth-20;
+            var h = document.body.clientHeight-20;
+            div.style.top = Math.random()*h + 'px';
+            div.style.left = Math.random()*w + 'px';
+            var body = document.body;
+            body.insertBefore(div,body.lastChild);
+        }
+        for(var i = 0; i < 100; i ++){
+            creatdiv(i);
+        }
+
+        function show(div){
+            var w = document.body.clientWidth-20;
+            var h = document.body.clientHeight-20;
+            var mx=Math.random()*2+1;
+            var my=Math.random()*2+1;
+            var str1 = div.style.left;
+            var str2 = div.style.top;
+            str1 = str1.replace('p','');
+            str1 = str1.replace('x','');
+            var x = Number(str1);
+            str2 = str2.replace('p','');
+            str2 = str2.replace('x','');
+            var y = Number(str2);
+            var id = setInterval(move,8);
+            function move(){
+                x += mx;
+                y += my;
+                if(x>w){
+                  x = w;
+                  mx = Math.random()*2*-1-1;
+                }
+                if(y>h){
+                  y= h;
+                  my = Math.random()*2*-1-1;
+                }
+                if(x<0){
+                  x = 0;
+                  mx = Math.random()*2+1;
+               }
+               if(y<0){
+                 y = 0;
+                 my = Math.random()*2+1;
+               }
+               div.style.left=x+"px";
+               div.style.top=y+"px";
+            }
+          
+        }
+
+        for(var i = 0; i < 100; i ++){
+            var div = document.getElementById('div'+i);
+            show(div);
+        }
+    </script>
+</body>
+</html>
