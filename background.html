@@ -21,13 +21,22 @@
         function creatdiv(i){
             var div = document.createElement('div');
             div.id = 'div'+i;
-            div.style.width = '20px';
-            div.style.height = '20px';
-            div.style.backgroundColor = 'blue';
+            div.style.width = '10px';
+            div.style.height = '10px';
             div.style.borderRadius = '10px';
             div.style.position = 'absolute';
             var w = document.body.clientWidth-20;
             var h = document.body.clientHeight-20;
+            var seed = Math.random()*10;
+            if(seed < 2.5){
+                div.style.backgroundColor = 'red';
+            }else if(seed < 5){
+                div.style.backgroundColor = 'blue';
+            }else if(seed <7.5){
+                div.style.backgroundColor = 'pink';
+            }else{
+                div.style.backgroundColor = 'green';
+            }
             div.style.top = Math.random()*h + 'px';
             div.style.left = Math.random()*w + 'px';
             var body = document.body;
@@ -59,8 +68,8 @@
                   mx = Math.random()*2*-1-1;
                 }
                 if(y>h){
-                  y= h;
-                  my = Math.random()*2*-1-1;
+                  y= 0;
+                  my = Math.random()*2+1;
                 }
                 if(x<0){
                   x = 0;
