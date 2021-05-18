@@ -46,7 +46,7 @@
             var w = document.body.clientWidth-30;
             var h = document.body.clientHeight-30;
             var mx=Math.random()*2+0.2;
-            var my=Math.random()*2+0.2;
+            var my=Math.random()*0.5+1;
             var str1 = div.style.left;
             var str2 = div.style.top;
             str1 = str1.replace('p','');
@@ -62,20 +62,20 @@
                 if(x>w){
                   x = Math.random()*w;
                   y = Math.random()*h*0.5;
-                  mx = Math.random()*2*+1;
+                  mx = Math.random()*2+0.2;
                 }
                 if(y>h){
                   x = Math.random()*w;
                   y = Math.random()*h*0.5;
-                  my = Math.random()*2+1;
+                  my = Math.random()*0.5+1;
                 }
                 if(x<0){
                   x = 0;
-                  mx = Math.random()*2+1;
+                  mx = Math.random()*2+0.2;
                }
                if(y<0){
                  y = 0;
-                 my = Math.random()*2+1;
+                 my = Math.random()*0.5+1;
                }
                div.style.left=x+"px";
                div.style.top=y+"px";
