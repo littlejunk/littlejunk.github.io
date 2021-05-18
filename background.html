@@ -18,6 +18,9 @@
 <body>
     
     <script>
+        
+
+
         function creatdiv(i){
             var div = document.createElement('div');
             div.id = 'div'+i;
@@ -28,7 +31,18 @@
             var h = document.body.clientHeight-20;
             var seed = Math.random()*10;
             var snow = document.createElement('img');
-            snow.src = 'image/snow.jpg';
+            if(seed<2){
+                snow.src = 'image/f1.png';
+            }else if(seed<4){
+                snow.src = 'image/f2.png';
+            }else if(seed<6){
+                snow.src = 'image/f3.png';
+            }else if(seed<8){
+                snow.src = 'image/f4.png';
+            }else{
+                snow.src = 'image/f5.png';
+            }
+            // snow.src = 'image/snow.jpg';
             snow.style.width ='20px';
             snow.style.height ='20px';
             div.style.top = Math.random()*h + 'px';
@@ -40,7 +54,6 @@
         for(var i = 0; i < 20; i ++){
             creatdiv(i);
         }
-
         function show(div){
             var w = document.body.clientWidth-20;
             var h = document.body.clientHeight-20;
@@ -81,11 +94,13 @@
             }
           
         }
-
         for(var i = 0; i < 20; i ++){
             var div = document.getElementById('div'+i);
             show(div);
         }
+
+
+
     </script>
 </body>
 </html>
