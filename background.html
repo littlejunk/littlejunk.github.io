@@ -42,15 +42,15 @@
             var body = document.body;
             body.insertBefore(div,body.lastChild);
         }
-        for(var i = 0; i < 100; i ++){
+        for(var i = 0; i < 20; i ++){
             creatdiv(i);
         }
 
         function show(div){
             var w = document.body.clientWidth-20;
             var h = document.body.clientHeight-20;
-            var mx=Math.random()*2+1;
-            var my=Math.random()*2+1;
+            var mx=Math.random()*2+0.2;
+            var my=Math.random()*2+0.2;
             var str1 = div.style.left;
             var str2 = div.style.top;
             str1 = str1.replace('p','');
@@ -64,11 +64,12 @@
                 x += mx;
                 y += my;
                 if(x>w){
-                  x = w;
-                  mx = Math.random()*2*-1-1;
+                  x = Math.random()*w;
+                  y = 0;
+                  mx = Math.random()*2*+1;
                 }
                 if(y>h){
-                  y= 0;
+                  y = 0;
                   my = Math.random()*2+1;
                 }
                 if(x<0){
@@ -81,11 +82,13 @@
                }
                div.style.left=x+"px";
                div.style.top=y+"px";
+               mx=Math.random()*2+0.2;
+               my=Math.random()*2+0.2;
             }
           
         }
 
-        for(var i = 0; i < 100; i ++){
+        for(var i = 0; i < 20; i ++){
             var div = document.getElementById('div'+i);
             show(div);
         }
