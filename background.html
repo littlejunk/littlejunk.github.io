@@ -21,34 +21,30 @@
         function creatdiv(i){
             var div = document.createElement('div');
             div.id = 'div'+i;
-            div.style.width = '10px';
-            div.style.height = '10px';
-            div.style.borderRadius = '10px';
+            div.style.width = '30px';
+            div.style.height = '30px';
             div.style.position = 'absolute';
-            var w = document.body.clientWidth-20;
-            var h = document.body.clientHeight-20;
+            var w = document.body.clientWidth-30;
+            var h = document.body.clientHeight-30;
             var seed = Math.random()*10;
-            if(seed < 2.5){
-                div.style.backgroundColor = 'red';
-            }else if(seed < 5){
-                div.style.backgroundColor = 'blue';
-            }else if(seed <7.5){
-                div.style.backgroundColor = 'pink';
-            }else{
-                div.style.backgroundColor = 'green';
-            }
+            var snow = document.createElement('img');
+            snow.src = 'image/snow.jpg';
+            snow.style.width ='30px';
+            snow.style.height ='30px';
+            console.log();
             div.style.top = Math.random()*h + 'px';
             div.style.left = Math.random()*w + 'px';
+            div.appendChild(snow);
             var body = document.body;
             body.insertBefore(div,body.lastChild);
         }
-        for(var i = 0; i < 20; i ++){
+        for(var i = 0; i < 10; i ++){
             creatdiv(i);
         }
 
         function show(div){
-            var w = document.body.clientWidth-20;
-            var h = document.body.clientHeight-20;
+            var w = document.body.clientWidth-30;
+            var h = document.body.clientHeight-30;
             var mx=Math.random()*2+0.2;
             var my=Math.random()*2+0.2;
             var str1 = div.style.left;
@@ -65,7 +61,7 @@
                 y += my;
                 if(x>w){
                   x = Math.random()*w;
-                  y = 0;
+                  y = Math.random()*h*0.5;
                   mx = Math.random()*2*+1;
                 }
                 if(y>h){
@@ -88,7 +84,7 @@
           
         }
 
-        for(var i = 0; i < 20; i ++){
+        for(var i = 0; i < 10; i ++){
             var div = document.getElementById('div'+i);
             show(div);
         }
