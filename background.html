@@ -38,7 +38,7 @@
             var body = document.body;
             body.insertBefore(div,body.lastChild);
         }
-        for(var i = 0; i < 10; i ++){
+        for(var i = 0; i < 20; i ++){
             creatdiv(i);
         }
 
@@ -65,7 +65,8 @@
                   mx = Math.random()*2*+1;
                 }
                 if(y>h){
-                  y = 0;
+                  x = Math.random()*w;
+                  y = Math.random()*h*0.5;
                   my = Math.random()*2+1;
                 }
                 if(x<0){
@@ -78,13 +79,11 @@
                }
                div.style.left=x+"px";
                div.style.top=y+"px";
-               mx=Math.random()*2+0.2;
-               my=Math.random()*2+0.2;
             }
           
         }
 
-        for(var i = 0; i < 10; i ++){
+        for(var i = 0; i < 20; i ++){
             var div = document.getElementById('div'+i);
             show(div);
         }
