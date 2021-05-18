@@ -21,17 +21,16 @@
         function creatdiv(i){
             var div = document.createElement('div');
             div.id = 'div'+i;
-            div.style.width = '30px';
-            div.style.height = '30px';
+            div.style.width = '20px';
+            div.style.height = '20px';
             div.style.position = 'absolute';
-            var w = document.body.clientWidth-30;
-            var h = document.body.clientHeight-30;
+            var w = document.body.clientWidth-20;
+            var h = document.body.clientHeight-20;
             var seed = Math.random()*10;
             var snow = document.createElement('img');
             snow.src = 'image/snow.jpg';
-            snow.style.width ='30px';
-            snow.style.height ='30px';
-            console.log();
+            snow.style.width ='20px';
+            snow.style.height ='20px';
             div.style.top = Math.random()*h + 'px';
             div.style.left = Math.random()*w + 'px';
             div.appendChild(snow);
@@ -43,8 +42,8 @@
         }
 
         function show(div){
-            var w = document.body.clientWidth-30;
-            var h = document.body.clientHeight-30;
+            var w = document.body.clientWidth-20;
+            var h = document.body.clientHeight-20;
             var mx=Math.random()*2+0.2;
             var my=Math.random()*0.5+1;
             var str1 = div.style.left;
