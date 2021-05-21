@@ -17,7 +17,7 @@
     html,
     body {
         height: 100%;
-        background-color: rgb(183, 253, 255);
+        background-color: rgb(150, 246, 253);
     }
 
     #daohan {
@@ -33,7 +33,6 @@
     #bottom {
         width: 100%;
         height: 15%;
-        padding-top: 20px;
     }
 
     #box {
@@ -69,7 +68,7 @@
     #title {
         height: 50%;
         text-align: center;
-        color: rgb(11, 0, 163);
+        color: rgb(0, 0, 0);
         font-weight: bolder;
         font-size: 30px;
     }
@@ -121,22 +120,22 @@
     }
 
     #box ol {
-            font-size:2px ;
-            list-style: none;
-            position: absolute;
-            bottom: 8px;
-            right: 0;
-        }
+        font-size: 2px;
+        list-style: none;
+        position: absolute;
+        bottom: 8px;
+        right: 0;
+    }
 
     #box ol li {
-            float: left;
-            width: 15px;
-            height: 15px;
-            line-height: 20px;
-            text-align: center;
-            border-radius: 50%;
-            background-color: #ccc;
-            margin-right: 10px;
+        float: left;
+        width: 15px;
+        height: 15px;
+        line-height: 20px;
+        text-align: center;
+        border-radius: 50%;
+        background-color: #ccc;
+        margin-right: 10px;
     }
 
     #left,
@@ -160,37 +159,35 @@
     #right {
         right: 0;
     }
-    #gun{
+
+    #gun {
         height: 100%;
     }
-    #musicc{
-        margin-top: 200px;
+
+    #musicc {
         overflow: hidden;
+        margin-top: 10px;
         height: 100px;
-       
+
     }
-    #musics{
-       color: darkorchid;
+
+    #musics {
+        color: darkorchid;
+    }
+    #mylink span{
+        margin-right: 50px;
     }
 </style>
 
 <body>
-
     <div id="daohan">
         <div id="title"> 介绍一部自己喜欢的电影（泰坦尼克号）</div>
         <div id="mylink">
-            <span>相关链接：&ensp;&ensp;&ensp;&ensp;
-                &ensp;&ensp;&ensp;</span>
-            <span><a href="https://www.iqiyi.com/v_19rrny4w8w.html?vfm=m_127_bdbk&fv=b4f024cc44de40f2"
-                    target="_blank">点我观看&ensp;&ensp;&ensp;&ensp;
-                    &ensp;&ensp;&ensp;</a></span>
-            <span><a href="https://movie.douban.com/subject/1292722/" target="_blank">豆瓣影评&ensp;&ensp;&ensp;&ensp;
-                    &ensp;&ensp;&ensp;</a></span>
-            <span><a href="https://space.bilibili.com/321512194" target="_blank">B站主页&ensp;&ensp;&ensp;&ensp;
-                    &ensp;&ensp;&ensp;</a></span>
-            <span><a href="https://baike.baidu.com/item/%E6%B3%B0%E5%9D%A6%E5%B0%BC%E5%85%8B%E5%8F%B7/6162581?fr=aladdin"
-                    target="_blank">关于它&ensp;&ensp;&ensp;&ensp;
-                </a></span>
+            <span style="color: rgb(19, 77, 124); font-weight: bolder;">相关链接：</span>
+            <span><a id="a1" href="https://www.iqiyi.com/v_19rrny4w8w.html?vfm=m_127_bdbk&fv=b4f024cc44de40f2"target="_blank">点我观看</a></span>
+            <span><a href="https://movie.douban.com/subject/1292722/" target="_blank">豆瓣影评</a></span>
+            <span><a href="https://space.bilibili.com/321512194" target="_blank">B站主页</a></span>
+            <span><a href="https://baike.baidu.com/item/%E6%B3%B0%E5%9D%A6%E5%B0%BC%E5%85%8B%E5%8F%B7/6162581?fr=aladdin"target="_blank">关于它</a></span>
         </div>
     </div>
     <div id="content">
@@ -213,34 +210,41 @@
                 <ol></ol>
             </div>
             <div>
-                <span id="left"><</span>
+                <span id="left">
+                    <</span>
                 <span id="right">></span>
             </div>
         </div>
         <div id="c2">
-            <div style="font-size: 30px;">电影简介：</div>
+            <div style="font-size: 30px; color: rgb(158, 54, 13);">电影简介：</div>
             <p>
-                 <marquee id="gun" behavior="scroll" direction="up">
-                  <div>1912年4月10日，号称 “世界工业史上的奇迹”的豪华客轮泰坦尼克号开始了自己的处女航，从英国的南安普顿出发驶往美国纽约。富家少女罗丝（凯特•温丝莱特）与母亲及未婚夫卡尔坐上了头等舱；另一边，放荡不羁的少年画家杰克（莱昂纳多·迪卡普里奥）也在码头的一场赌博中赢得了下等舱的船票。罗丝厌倦了上流社会虚伪的生活，不愿嫁给卡尔，打算投海自尽，被杰克救起。很快，美丽活泼的罗丝与英俊开朗的杰克相爱，杰克带罗丝参加下等舱的舞会、为她画像，二人的感情逐渐升温。 1912年4月14日，星期天晚上，一个风平浪静的夜晚。泰坦尼克号撞上了冰山，“永不沉没的”泰坦尼克号面临沉船的命运，罗丝和杰克刚萌芽的爱情也将经历生死的考验。</div>
-                 </marquee>
+                <marquee id="gun" behavior="scroll" direction="up">
+                    <div>1912年4月10日，号称
+                        “世界工业史上的奇迹”的豪华客轮泰坦尼克号开始了自己的处女航，从英国的南安普顿出发驶往美国纽约。富家少女罗丝（凯特•温丝莱特）与母亲及未婚夫卡尔坐上了头等舱；另一边，放荡不羁的少年画家杰克（莱昂纳多·迪卡普里奥）也在码头的一场赌博中赢得了下等舱的船票。罗丝厌倦了上流社会虚伪的生活，不愿嫁给卡尔，打算投海自尽，被杰克救起。很快，美丽活泼的罗丝与英俊开朗的杰克相爱，杰克带罗丝参加下等舱的舞会、为她画像，二人的感情逐渐升温。
+                        1912年4月14日，星期天晚上，一个风平浪静的夜晚。泰坦尼克号撞上了冰山，“永不沉没的”泰坦尼克号面临沉船的命运，罗丝和杰克刚萌芽的爱情也将经历生死的考验。</div>
+                </marquee>
         </div>
         <div id="c3">
-            <div id="musics">
-                该部电影一经上映就获得全球最高票房，并且将该记录保持了很长时间，除了电影，该电影主题曲在当时也受到广泛好评,点击按钮可以试听主题曲
+            <div id="musics" style="color: rgb(63, 135, 244); font-weight: bolder;">
+                电影主题曲,点击下方按钮可以试听主题曲
+            </div>
+            <div style="border-radius: 20px; overflow: hidden; margin-top: 50px;">
+                <img src="image/jiao.jpg" width="100%" >
             </div>
             <div id="musicc">
-                <audio src="image/myheartwillgoon.mp3" controls></audio>
+                <audio src="image/music.mp3" controls></audio>
             </div>
         </div>
     </div>
     <div id="bottom">
-        &ensp;&ensp;&ensp;&ensp;
-        &ensp;&ensp;&ensp;学号：201908050233  &ensp;&ensp;&ensp;&ensp;
-        &ensp;&ensp;&ensp; 姓名:邱顺林&ensp;&ensp;&ensp;&ensp;
-        &ensp;&ensp;&ensp;本网站动图与背景花瓣飘落使用javaScript写成
-
+        <div style="padding-top: 40px; color: blueviolet;">
+            <hr>
+            &ensp;&ensp;&ensp;&ensp;
+            &ensp;&ensp;&ensp;学号：201908050233 &ensp;&ensp;&ensp;&ensp;
+            &ensp;&ensp;&ensp; 姓名:邱顺林&ensp;&ensp;&ensp;&ensp;
+            &ensp;&ensp;&ensp;本网站动图与背景花瓣飘落使用javaScript写成
+        </div>
     </div>
-
 
     <script>
         // 花瓣飘落背景
@@ -270,7 +274,7 @@
             var body = document.body;
             body.insertBefore(snow, body.lastChild);
         }
-        for (var i = 0; i < 20; i++) {
+        for (var i = 0; i < 40; i++) {
             creatdiv(i);
         }
         function show(div) {
@@ -313,13 +317,13 @@
             }
 
         }
-        for (var i = 0; i < 20; i++) {
+        for (var i = 0; i < 40; i++) {
             var div = document.getElementById('img' + i);
             show(div);
         }
     </script>
     <script>
-        var interval = 5000;
+        var interval = 3000;
         var box = document.getElementById('box');
         var screen = box.children[0];
         var ul = screen.children[0];
