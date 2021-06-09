@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>介绍电影</title>
+    <title>介绍服饰</title>
 </head>
 <style>
     html,
@@ -15,8 +15,10 @@
     }
    
    .tc{
-       text-align: center;
+       padding: 10px;
        top: 120px;
+       font-weight: bolder;
+       font-style: italic;
    }
  #b{
             position: absolute;
@@ -56,7 +58,7 @@
             left: 650px;
             height: 100px;        
             width: 200px;
-            border: rgb(247, 91, 234) 5px solid;
+            border: rgb(231, 136, 136) 5px solid;
             background-color: rgb(255, 255, 255);
             border-radius: 10px;
             z-index: -1;
@@ -65,7 +67,10 @@
     html,
     body {
         height: 100%;
-        background-color: rgb(170, 238, 255);
+        background-color: rgb(197, 245, 248);
+        /* background-image: url(image/background.jpg); */
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     #daohan {
@@ -116,7 +121,7 @@
 
     #title {
         height: 50%;
-        padding-top:20px;
+        padding-top:15px;
         text-align: center;
         color: rgb(0, 0, 0);
         font-style: italic;
@@ -143,7 +148,7 @@
     }
 
     a:visited {
-        color: rgb(133, 142, 150);
+        color: rgb(82, 82, 82);
     }
 
     a {
@@ -208,10 +213,12 @@
 
     #left {
         left: 0;
+        top: 100px;
     }
 
     #right {
         right: 0;
+        top: 100px;
     }
 
     #gun {
@@ -238,9 +245,10 @@
         left: 72%; 
         padding: 5px;
         font-style: italic;
-        color: rgb(137, 16, 185);
+        color: rgb(226, 60, 9);
         top: 12%;
         border: rgb(64, 66, 77) 3px solid;
+        font-weight: bolder;
         border-radius: 5px;
     }
 </style>
@@ -248,18 +256,18 @@
 <body>
 
   
-    <div class="tc" id="b"> 弹窗1</div>
-    <div class="tc" id="b1">弹窗2</div>
-    <div class="tc" id="b2">弹窗3</div>
-    <div class="tc" id="b3">弹窗4</div>
+    <div class="tc" id="b"> 工欲善其事，必先利其器，前往购买程序员必备的格子衬衫</div>
+    <div class="tc" id="b1">为什么程序员都喜欢格子衬衫</div>
+    <div class="tc" id="b2">跳转向我的B站主页</div>
+    <div class="tc" id="b3">点击此链接将会跳转到关于格子衬衫的百度百科界面</div>
     <div id="daohan">
-        <div id="title"> 介绍一部自己喜欢的电影</div>
+        <div id="title"> 我第三喜爱的服饰</div>
         <div id="mylink">
             <span style="color: rgb(19, 77, 124); font-weight: bolder;">相关链接：</span>
-            <span><a id="a1" href="https://www.iqiyi.com/v_19rrny4w8w.html?vfm=m_127_bdbk&fv=b4f024cc44de40f2"target="_blank">点我观看</a></span>
-            <span><a id="a2"href="https://movie.douban.com/subject/1292722/" target="_blank">豆瓣影评</a></span>
+            <span><a id="a1" href="https://www.uniqlo.cn/search.html?description=%E6%A0%BC%E5%AD%90%E8%A1%AC%E8%A1%AB"target="_blank">格子衬衫专卖</a></span>
+            <span><a id="a2"href="https://www.zhihu.com/question/298280663" target="_blank">为什么喜欢</a></span>
             <span><a id="a3" href="https://space.bilibili.com/321512194" target="_blank">B站主页</a></span>
-            <span><a id="a4" href="https://baike.baidu.com/item/%E6%B3%B0%E5%9D%A6%E5%B0%BC%E5%85%8B%E5%8F%B7/6162581?fr=aladdin"target="_blank">关于它</a></span>
+            <span><a id="a4" href="https://baike.baidu.com/item/%E6%A0%BC%E5%AD%90%E8%A1%AC%E8%A1%AB/4400147?fr=aladdin"target="_blank">关于它</a></span>
         </div>
 
         <div id="nowDiv" ></div>
@@ -270,16 +278,16 @@
             <div class="screen">
                 <ul>
                     <li>
-                        <img src="image/t1.jpg">
+                        <img src="image/w1.jpg">
                     </li>
                     <li>
-                        <img src="image/t2.jpg">
+                        <img src="image/w2.jpg">
                     </li>
                     <li>
-                        <img src="image/t3.jpg">
+                        <img src="image/w3.jpg">
                     </li>
                     <li>
-                        <img src="image/t4.jpeg">
+                        <img src="image/w4.jpg">
                     </li>
                 </ul>
                 <ol></ol>
@@ -291,12 +299,14 @@
             </div>
         </div>
         <div id="c2">
-            <div style="font-size: 30px; color: rgb(158, 54, 13);">电影简介：</div>
+            <div style="font-size: 30px; color: rgb(125, 52, 139);">服饰简介：</div>
             <p>
                 <marquee id="gun" behavior="scroll" direction="up">
-                    <div>1912年4月10日，号称
-                        “世界工业史上的奇迹”的豪华客轮泰坦尼克号开始了自己的处女航，从英国的南安普顿出发驶往美国纽约。富家少女罗丝（凯特•温丝莱特）与母亲及未婚夫卡尔坐上了头等舱；另一边，放荡不羁的少年画家杰克（莱昂纳多·迪卡普里奥）也在码头的一场赌博中赢得了下等舱的船票。罗丝厌倦了上流社会虚伪的生活，不愿嫁给卡尔，打算投海自尽，被杰克救起。很快，美丽活泼的罗丝与英俊开朗的杰克相爱，杰克带罗丝参加下等舱的舞会、为她画像，二人的感情逐渐升温。
-                        1912年4月14日，星期天晚上，一个风平浪静的夜晚。泰坦尼克号撞上了冰山，“永不沉没的”泰坦尼克号面临沉船的命运，罗丝和杰克刚萌芽的爱情也将经历生死的考验。</div>
+                    <div>格子衬衫是传统与时尚的经典结合，是重要的点缀。给人清爽的印象，让衬衫渲染出你独立的气质。
+                        穿着给人清爽活波开朗的感觉。任何年龄段的女人都可以穿着，最百搭的衣服。格子衬衫无疑是整个格子风潮中的必备品，
+                        因为它休闲，百搭，贴心又温暖。如果有一件衣服简单好穿，配色多不单调，能搭牛仔能配双肩包，还方便好洗不用打理，能从春穿到秋，夏穿到冬，大概也只有格子衫了吧。　
+                        程序员是从事程序开发、维护的专业人员，分为程序设计人员和程序编码人员不仅要代码熟练，做的工作也是设计实现所以着装上要显得自己有点审美和活力才符合职业要求。
+                        是IT从业人员心中永远无法割舍的爱，男程序员的格子衬衣，女程序员的卡其风衣,格子衫穿上，代码敲出来都整整齐齐。</div>
                 </marquee>
         </div>
         <div id="c3">
@@ -315,47 +325,47 @@
                 <div class="cube">
                     <!--前面图片 -->
                     <div class="out_front">
-                        <img src="https://i.loli.net/2018/10/04/5bb5f270969f2.jpeg" class="pic">
+                        <img src="image/r1.jpg" class="pic">
                     </div>
                     <!--后面图片 -->
                     <div class="out_back">
-                        <img src="https://i.loli.net/2018/10/04/5bb5f23ce7f1e.jpg" class="pic">
+                        <img src="image/r2.jpg" class="pic">
                     </div>
                     <!--左面图片 -->
                     <div class="out_left">
-                        <img src="https://i.loli.net/2018/10/04/5bb5f26e13b28.jpg" class="pic">
+                        <img src="image/r3.jpg" class="pic">
                     </div>
                     <!--右面图片 -->
                     <div class="out_right">
-                        <img src="https://i.loli.net/2018/10/07/5bb9b1ca97948.jpg" class="pic">
+                        <img src="image/r4.jpg" class="pic">
                     </div>
                     <!--上面图片 -->
                     <div class="out_top">
-                        <img src="https://i.loli.net/2018/10/04/5bb5f2725c5c7.jpg" class="pic">
+                        <img src="image/r5.jpg" class="pic">
                     </div>
                     <!--下面图片 -->
                     <div class="out_bottom">
-                        <img src="https://i.loli.net/2018/10/04/5bb5f27af2e28.jpg" class="pic">
+                        <img src="image/r6.jpg" class="pic">
                     </div>
             
                     <!--小正方体 -->
                     <span class="in_front">
-                            <img src="https://i.loli.net/2018/10/07/5bb9b2e441d7a.jpg" class="in_pic">
+                            <img src="image/jk1.jpeg" class="in_pic">
                         </span>
                     <span class="in_back">
-                             <img src="https://i.loli.net/2018/10/07/5bb9b2e712b3f.jpg" class="in_pic">
+                             <img src="image/jk2.jpg" class="in_pic">
                         </span>
                     <span class="in_left">
-                            <img src="https://i.loli.net/2018/10/07/5bb9b2e86ad25.jpg" class="in_pic">
+                            <img src="image/jk3.jpg" class="in_pic">
                         </span>
                     <span class="in_right">
-                            <img src="https://i.loli.net/2018/10/07/5bb9b2eaba148.jpg" class="in_pic">
+                            <img src="image/jk4.jpg" class="in_pic">
                         </span>
                     <span class="in_top">
-                            <img src="https://i.loli.net/2018/10/07/5bb9b2ebe5bd9.jpg" class="in_pic">
+                            <img src="image/jk5.jpg" class="in_pic">
                         </span>
                     <span class="in_bottom">
-                            <img src="https://i.loli.net/2018/10/07/5bb9b2ed867be.jpg" class="in_pic">
+                            <img src="image/jk6.jpg" class="in_pic">
                         </span>
             
                 </div>
@@ -513,7 +523,10 @@
         </div>
     </div>
     <div id="bottom">
-        
+        <hr>
+        <div style="margin-left: 500px; font-size: 20px; font-weight: bolder;"> 本人姓名：邱顺林   &ensp;&ensp;&ensp;&ensp;   学号：201908050233   &ensp;&ensp;&ensp;&ensp; 简介：专业划水运动员</div>
+        <div style="margin-top: 10px; margin-left: 50px;">前一位同学姓名：胡航睿  &ensp;&ensp;&ensp;&ensp;学号：201908050232</div>
+        <div style="margin-left: 50px;">后一位同学姓名：傅丽杰  &ensp;&ensp;&ensp;&ensp;学号：201908050234</div>
     </div>
 
     <script>
