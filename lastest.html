@@ -13,17 +13,57 @@
         margin: 0;
         padding: 0;
     }
-
-    #c{
+   
+   .tc{
+       text-align: ;
+   }
+ #b{
             position: absolute;
-            left: 150px;
-            height: 100px;
-            width: 100px;
-            top: 150px;
-            background-color: rgb(134, 118, 118);
+            left: 290px;
+            height: 100px;        
+            width: 200px;
+            top: 100px;
+            border: cornflowerblue 5px solid;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            z-index: -1;
+    }
+    
+    #b1{
+            position: absolute;
+            left: 420px;
+            height: 100px;        
+            width: 200px;
+            top: 100px;
+            border: rgb(100, 237, 157) 5px solid;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
             z-index: -1;
     }
 
+    #b2{
+            position: absolute;
+            left: 540px;
+            height: 100px;        
+            width: 200px;
+            top: 100px;
+            border: rgb(248, 161, 80) 5px solid;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            z-index: -1;
+    }
+
+    #b3{
+            position: absolute;
+            left: 650px;
+            height: 100px;        
+            width: 200px;
+            top: 100px;
+            border: rgb(247, 91, 234) 5px solid;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            z-index: -1;
+    }
 
     html,
     body {
@@ -194,8 +234,9 @@
         font-size: 25px;
         position: absolute; 
         left: 70%; 
-        top: 15%;
-        border: rgb(3, 40, 248) 3px solid;
+        color: rgb(137, 16, 185);
+        top: 12%;
+        border: rgb(64, 66, 77) 3px solid;
         border-radius: 5px;
     }
 </style>
@@ -203,16 +244,18 @@
 <body>
 
   
-    <div id="c"></div>
-
+    <div class="tc" id="b"> 弹窗1</div>
+    <div class="tc" id="b1">弹窗2</div>
+    <div class="tc" id="b2">弹窗3</div>
+    <div class="tc" id="b3">弹窗4</div>
     <div id="daohan">
         <div id="title"> 介绍一部自己喜欢的电影（泰坦尼克号）</div>
         <div id="mylink">
             <span style="color: rgb(19, 77, 124); font-weight: bolder;">相关链接：</span>
             <span><a id="a1" href="https://www.iqiyi.com/v_19rrny4w8w.html?vfm=m_127_bdbk&fv=b4f024cc44de40f2"target="_blank">点我观看</a></span>
-            <span><a href="https://movie.douban.com/subject/1292722/" target="_blank">豆瓣影评</a></span>
-            <span><a href="https://space.bilibili.com/321512194" target="_blank">B站主页</a></span>
-            <span><a href="https://baike.baidu.com/item/%E6%B3%B0%E5%9D%A6%E5%B0%BC%E5%85%8B%E5%8F%B7/6162581?fr=aladdin"target="_blank">关于它</a></span>
+            <span><a id="a2"href="https://movie.douban.com/subject/1292722/" target="_blank">豆瓣影评</a></span>
+            <span><a id="a3" href="https://space.bilibili.com/321512194" target="_blank">B站主页</a></span>
+            <span><a id="a4" href="https://baike.baidu.com/item/%E6%B3%B0%E5%9D%A6%E5%B0%BC%E5%85%8B%E5%8F%B7/6162581?fr=aladdin"target="_blank">关于它</a></span>
         </div>
 
         <div id="nowDiv" ></div>
@@ -685,14 +728,39 @@
         }, interval);
     </script>
     <script>
-        var c = document.getElementById('c');
-        var a = document.getElementById('a1');
-        a.onmouseover = function(){
+        var c = document.getElementById('b');
+        var a1 = document.getElementById('a1');
+        var c1 = document.getElementById('b1');
+        var a2 = document.getElementById('a2');
+        var c2 = document.getElementById('b2');
+        var a3 = document.getElementById('a3');
+        var c3 = document.getElementById('b3');
+        var a4 = document.getElementById('a4');
+        a1.onmouseover = function(){
             c.style.zIndex = '5';
         }
-        a.onmouseout = function(){
+        a1.onmouseout = function(){
             c.style.zIndex = '-1';
         }
+        a2.onmouseover = function(){
+            c1.style.zIndex = '5';
+        }
+        a2.onmouseout = function(){
+            c1.style.zIndex = '-1';
+        }
+        a3.onmouseover = function(){
+            c2.style.zIndex = '5';
+        }
+        a3.onmouseout = function(){
+            c2.style.zIndex = '-1';
+        }
+        a4.onmouseover = function(){
+            c3.style.zIndex = '5';
+        }
+        a4.onmouseout = function(){
+            c3.style.zIndex = '-1';
+        }
+
     </script>
     <script type="text/javascript">
         function show(){                
