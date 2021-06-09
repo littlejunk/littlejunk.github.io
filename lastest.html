@@ -14,10 +14,21 @@
         padding: 0;
     }
 
+    #c{
+            position: absolute;
+            left: 150px;
+            height: 100px;
+            width: 100px;
+            top: 150px;
+            background-color: rgb(134, 118, 118);
+            z-index: -1;
+    }
+
+
     html,
     body {
         height: 100%;
-        background-color: rgb(150, 246, 253);
+        background-color: rgb(170, 238, 255);
     }
 
     #daohan {
@@ -38,8 +49,9 @@
     #box {
         position: absolute;
         left: 3%;
-        height: 450px;
-        width: 760px;
+        top: 30%;
+        height: 300px;
+        width: 500px;
         overflow: hidden;
         border-radius: 5px;
     }
@@ -48,7 +60,7 @@
         height: 60%;
         width: 20%;
         position: absolute;
-        left: 55%;
+        left: 40%;
         overflow: hidden;
         padding-left: 5px;
         padding-top: 10px;
@@ -59,7 +71,7 @@
     #c3 {
         padding: 5px;
         position: absolute;
-        left: 77%;
+        left: 63%;
         height: 60%;
         width: 20%;
         border-radius: 5px;
@@ -110,8 +122,8 @@
     }
 
     .screen img {
-        width: 760px;
-        height: 450px;
+        width: 500px;
+        height: 300px;
     }
 
     .screen ul li {
@@ -177,10 +189,21 @@
     #mylink span{
         margin-right: 50px;
     }
+    
+    #nowDiv{
+        font-size: 25px;
+        position: absolute; 
+        left: 70%; 
+        top: 15%;
+        border: rgb(3, 40, 248) 3px solid;
+        border-radius: 5px;
+    }
 </style>
 
 <body>
 
+  
+    <div id="c"></div>
 
     <div id="daohan">
         <div id="title"> 介绍一部自己喜欢的电影（泰坦尼克号）</div>
@@ -191,6 +214,9 @@
             <span><a href="https://space.bilibili.com/321512194" target="_blank">B站主页</a></span>
             <span><a href="https://baike.baidu.com/item/%E6%B3%B0%E5%9D%A6%E5%B0%BC%E5%85%8B%E5%8F%B7/6162581?fr=aladdin"target="_blank">关于它</a></span>
         </div>
+
+        <div id="nowDiv" ></div>
+
     </div>
     <div id="content">
         <div id="box">
@@ -227,7 +253,7 @@
                 </marquee>
         </div>
         <div id="c3">
-            <div id="musics" style="color: rgb(63, 135, 244); font-weight: bolder;">
+            <!-- <div id="musics" style="color: rgb(63, 135, 244); font-weight: bolder;">
                 电影主题曲,点击下方按钮可以试听主题曲
             </div>
             <div style="border-radius: 20px; overflow: hidden; margin-top: 50px;">
@@ -235,17 +261,212 @@
             </div>
             <div id="musicc">
                 <audio src="image/music.mp3" controls></audio>
+            </div> -->
+
+            <div class="wrap">
+                <!--部署内外层图片-->
+                <div class="cube">
+                    <!--前面图片 -->
+                    <div class="out_front">
+                        <img src="https://i.loli.net/2018/10/04/5bb5f270969f2.jpeg" class="pic">
+                    </div>
+                    <!--后面图片 -->
+                    <div class="out_back">
+                        <img src="https://i.loli.net/2018/10/04/5bb5f23ce7f1e.jpg" class="pic">
+                    </div>
+                    <!--左面图片 -->
+                    <div class="out_left">
+                        <img src="https://i.loli.net/2018/10/04/5bb5f26e13b28.jpg" class="pic">
+                    </div>
+                    <!--右面图片 -->
+                    <div class="out_right">
+                        <img src="https://i.loli.net/2018/10/07/5bb9b1ca97948.jpg" class="pic">
+                    </div>
+                    <!--上面图片 -->
+                    <div class="out_top">
+                        <img src="https://i.loli.net/2018/10/04/5bb5f2725c5c7.jpg" class="pic">
+                    </div>
+                    <!--下面图片 -->
+                    <div class="out_bottom">
+                        <img src="https://i.loli.net/2018/10/04/5bb5f27af2e28.jpg" class="pic">
+                    </div>
+            
+                    <!--小正方体 -->
+                    <span class="in_front">
+                            <img src="https://i.loli.net/2018/10/07/5bb9b2e441d7a.jpg" class="in_pic">
+                        </span>
+                    <span class="in_back">
+                             <img src="https://i.loli.net/2018/10/07/5bb9b2e712b3f.jpg" class="in_pic">
+                        </span>
+                    <span class="in_left">
+                            <img src="https://i.loli.net/2018/10/07/5bb9b2e86ad25.jpg" class="in_pic">
+                        </span>
+                    <span class="in_right">
+                            <img src="https://i.loli.net/2018/10/07/5bb9b2eaba148.jpg" class="in_pic">
+                        </span>
+                    <span class="in_top">
+                            <img src="https://i.loli.net/2018/10/07/5bb9b2ebe5bd9.jpg" class="in_pic">
+                        </span>
+                    <span class="in_bottom">
+                            <img src="https://i.loli.net/2018/10/07/5bb9b2ed867be.jpg" class="in_pic">
+                        </span>
+            
+                </div>
+                <style>
+                    /*最外层容器样式*/
+                    .wrap {
+                        width: 100px;
+                        height: 100px;
+                        margin: 150px;
+                        position: relative;
+                    }
+            
+                    /*得到立方体效果*/
+                    .cube {
+                        width: 50px;
+                        height: 50px;
+                        margin: 0 auto;
+                        transform-style: preserve-3d;
+                        /*设置动画播放样式:动画对象 播放速度 时间 播放次数*/
+                        animation: rotate linear 10s infinite;
+                    }
+            
+                    /*动画旋转的方式*/
+                    /*得到动画效果*/
+                    @-moz-keyframes rotate {                     /*firefox*/
+                        from {
+                            transform: rotateX(0deg) rotateY(0deg);
+                        }
+                        to {
+                            transform: rotateX(360deg) rotateY(360deg);
+                        }
+                    }
+                    @-webkit-keyframes rotate {                /*sofari chrome*/
+                        from {
+                            transform: rotateX(0deg) rotateY(0deg);
+                        }
+                        to {
+                            transform: rotateX(360deg) rotateY(360deg);
+                        }
+                    }
+                    @-o-keyframes rotate {                    /*opera*/
+                        from {
+                            transform: rotateX(0deg) rotateY(0deg);
+                        }
+                        to {
+                            transform: rotateX(360deg) rotateY(360deg);
+                        }
+                    }
+                    /*每张图片的样式*/
+                    .cube div {
+                        position: absolute;
+                        width: 200px;
+                        height: 200px;
+                        opacity: 0.8;
+                        /*过渡效果*/
+                        transition: all .4s;
+                    }
+            
+                    /*定义所有图片样式*/
+                    .pic {
+                        width: 200px;
+                        height: 200px;
+                    }
+            
+                    .cube .out_front {
+                        transform: rotateY(0deg) translateZ(100px);
+                    }
+            
+                    .cube .out_back {
+                        transform: translateZ(-100px) rotateY(180deg);
+                    }
+            
+                    .cube .out_left {
+                        transform: rotateY(-90deg) translateZ(100px);
+                    }
+            
+                    .cube .out_right {
+                        transform: rotateY(90deg) translateZ(100px);
+                    }
+            
+                    .cube .out_top {
+                        transform: rotateX(90deg) translateZ(100px);
+                    }
+            
+                    .cube .out_bottom {
+                        transform: rotateX(-90deg) translateZ(100px);
+                    }
+            
+                    /*定义小正方体样式*/
+                    .cube span {
+                        display: block;
+                        width: 100px;
+                        height: 100px;
+                        position: absolute;
+                        top: 50px;
+                        left: 50px;
+                    }
+            
+                    .cube .in_pic {
+                        width: 100px;
+                        height: 100px;
+                    }
+            
+                    .cube .in_front {
+                        transform: rotateY(0deg) translateZ(50px);
+                    }
+            
+                    .cube .in_back {
+                        transform: translateZ(-50px) rotateY(180deg);
+                    }
+            
+                    .cube .in_left {
+                        transform: rotateY(-90deg) translateZ(50px);
+                    }
+            
+                    .cube .in_right {
+                        transform: rotateY(90deg) translateZ(50px);
+                    }
+            
+                    .cube .in_top {
+                        transform: rotateX(90deg) translateZ(50px);
+                    }
+            
+                    .cube .in_bottom {
+                        transform: rotateX(-90deg) translateZ(50px);
+                    }
+            
+                    /*鼠标移入后样式*/
+                    .cube:hover .out_front {
+                        transform: rotateY(0deg) translateZ(200px);
+                    }
+            
+                    .cube:hover .out_back {
+                        transform: translateZ(-200px) rotateY(180deg);
+                    }
+            
+                    .cube:hover .out_left {
+                        transform: rotateY(-90deg) translateZ(200px);
+                    }
+            
+                    .cube:hover .out_right {
+                        transform: rotateY(90deg) translateZ(200px);
+                    }
+            
+                    .cube:hover .out_top {
+                        transform: rotateX(90deg) translateZ(200px);
+                    }
+            
+                    .cube:hover .out_bottom {
+                        transform: rotateX(-90deg) translateZ(200px);
+                    }
+                </style>
             </div>
+
         </div>
     </div>
     <div id="bottom">
-        <div style="padding-top: 40px; color: blueviolet;">
-            <hr>
-            &ensp;&ensp;&ensp;&ensp;
-            &ensp;&ensp;&ensp;学号：201908050233 &ensp;&ensp;&ensp;&ensp;
-            &ensp;&ensp;&ensp; 姓名:邱顺林&ensp;&ensp;&ensp;&ensp;
-            &ensp;&ensp;&ensp;本网站动图与背景花瓣飘落使用javaScript写成
-        </div>
+        
     </div>
 
     <script>
@@ -463,6 +684,58 @@
             arrRight.click();
         }, interval);
     </script>
+    <script>
+        var c = document.getElementById('c');
+        var a = document.getElementById('a1');
+        a.onmouseover = function(){
+            c.style.zIndex = '5';
+        }
+        a.onmouseout = function(){
+            c.style.zIndex = '-1';
+        }
+    </script>
+    <script type="text/javascript">
+        function show(){                
+                var date = new Date();
+                var now = "";                
+                now = date.getFullYear()+"年";
+                if(date.getMonth() < 10)
+                {
+                        now = now +"0";
+                }
+                now = now + (date.getMonth()+1)+"月"; 
+                //取月的时候取的是当前月-1如果想取当前月+1就可以了                
+        
+                if(date.getDate() < 10)
+                {
+                        now = now +"0";
+                }
+                now = now + date.getDate()+"日  ";
+        
+                if(date.getHours() < 10)
+                {
+                        now = now +"0";
+                }
+                now = now + date.getHours()+":";
+        
+                if(date.getMinutes() < 10)
+                {
+                        now = now +"0";
+                }
+                now = now + date.getMinutes()+":";
+        
+                if(date.getSeconds() < 10)
+                {
+                        now = now +"0";
+                }
+                now = now + date.getSeconds()+" ";
+                document.getElementById("nowDiv").innerHTML = now; 
+                //div的html是now这个字符串                
+                setTimeout("show()",1000); 
+                //设置过1000毫秒就是1秒，调用show方法                
+        }
+        show();
+        </script>
 </body>
 
 </html>
