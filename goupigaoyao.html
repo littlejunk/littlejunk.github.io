@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #goshe{
+            position: fixed;
+            top: 100px;
+            left: 1300px;
+            width: 150px;
+            height: 30px;
+            text-align: center;
+            background-color:  rgb(50, 163, 255);
+            padding-top: 10px;
+            border-radius: 10px;
+        }
+        #add{
+            position: fixed;
+            padding-top: 10px;
+            top: 142px;
+            left: 1300px;
+            width: 150px;
+            height: 30px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: rgb(50, 163, 255);
+        }
+        #returnmain{
+            position: fixed;
+            padding-top: 10px;
+            top: 184px;
+            left: 1300px;
+            width: 150px;
+            height: 30px;
+            text-align: center;
+            border-radius: 10px;
+            background-color:  rgb(50, 163, 255);
+        }
+    </style>
+</head>
+<body>
+    <div id="goshe">货架操作</div>
+    <div id="add">增加药品</div>
+    <div id="returnmain">返回主页</div>
+</body>
+<script>
+    var goshe = document.getElementById('goshe');
+    var add = document.getElementById('add');
+    var returnmain = document.getElementById('returnmain');
+    add.onclick = function(){
+      window.location.href="http://www.baidu.com";
+    }
+    goshe.onclick = function(){
+        location.href="http://www.baidu.com";
+    }
+    returnmain.onclick = function(){
+        location.href="http://www.baidu.com";
+    }
+
+</script>
+</html>
