@@ -1,0 +1,26 @@
+<div id="medicine">
+    <table>
+        <tr>
+          <i><td>药品编号</td>
+           <td>名称</td>
+            <td>价格</td>
+             <td>剩余数量</td>
+             <td>生产商</td>
+             <td>保质期至</td>
+              <td>货架</td></i>
+        </tr>
+     <c:forEach items="${list}" var="s">
+         <tr>
+           <td>${s.medId}</td>
+           <td>${s.medName}</td>
+           <td>${s.medPrice}</td>
+           <td>${s.medNum}</td>
+           <td>${s.production}</td>
+           <td>${s.sheLife}</td>
+           <td>${s.shelve.sheName}</td>
+           <td><a href="javascript:if(confirm('是否删除？')){location.href='med.do?type=del&medId=${s.medId}'}">删除</a></td>
+           <td><a href="med.do?type=findById&medId=${s.medId}">修改</a></td>
+       </tr>
+     </c:forEach>
+   </table>
+  </div>

@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>JavaScript可展开隐藏的侧边栏下拉菜单DEMO演示</title>
+
+<script src="js/adapter.js"></script> <!--rem适配js-->
+
+<link rel="stylesheet" href="css/base.css"> <!--初始化文件-->
+<link rel="stylesheet" href="css/menu.css"> <!--主样式-->
+<style>
+    #title{
+        width: 100%;
+        height: 75px;
+        font-size: 30px;
+        text-align: center;
+        font-weight: bolder;
+        position:absolute;
+        letter-spacing: 15px;
+        background-color: rgb(205, 231, 253);
+        line-height: 75px;
+    }
+    #content{
+        position: absolute;
+        background-color: rgb(162, 216, 252);
+        margin-left:260px;
+        margin-top: 75px;rgb(13, 40, 116)
+        background-color: ;
+        background-color: coral;
+    }
+    #notuse{
+        overflow: auto;
+        margin-top: 50px;
+    }
+    table {
+          border: rgb(0, 0, 0) 2px solid;
+          width: 800px;
+          font-size: 15px;
+      }
+    table,td{
+          text-align: center;
+          border: 1px solid black;
+    }
+    #shelve{
+        margin-left: 250px;
+        margin-top: 50px;
+        overflow: auto;
+    }
+    #medicine{
+        width: 800px;
+        margin-left: 250px;
+        margin-top: 50px;
+        overflow: auto;
+    }
+    #medicineadd{
+        text-align: center;
+        margin-top: 50px;
+    }
+    #shelveadd{
+        text-align: center;
+        margin-top: 50px;
+    }
+    #medicineupdate{
+        margin-top: 50px;
+    }
+    #shelveupdate{
+        margin-top: 50px;
+    }
+    #findmedicine{
+        margin-top: 50px;
+        overflow: auto;
+    }
+    #stitle{
+          font-size: 1em;
+          position: absolute;
+          left: 500px;
+          top: 100px;
+   }
+    #sresult{
+          position: absolute;
+          left: 250px;
+          top: 120px;
+    }
+    h1{
+            border :1px solid black;
+			text-align: center;
+			margin-left: 40%;
+			width: 20%;
+    }
+	form {
+			width: 20%;
+			height: 28%;
+			margin-left: 40%;
+			margin-top: 1%;
+			font-size: 20px
+	}
+	
+	form, td {
+			border :1px solid black;
+			text-align: center;
+	}
+</style>
+</head>
+<body>
+<div id="title">
+        药房药品管理系统
+</div>
+<div id="menu">
+    <!--隐藏菜单-->
+    <div id="ensconce">
+        <h2>
+            <img src="images/show.png" alt="">
+            打开菜单栏
+        </h2>
+    </div>
+
+    <!--显示菜单-->
+    <div id="open">
+        <div class="navH">
+            菜单栏
+            <span><img class="obscure" src="images/obscure.png" alt=""></span>
+        </div>
+        <div class="navBox">
+            <ul>
+                <li>
+                    <h2 class="obtain">药品操作<i></i></h2>
+                    <div class="secondary">
+                        <h3>查看所有药品</h3>
+                        <h3>增加药品</h3>
+                    </div>
+                </li>
+                <li>
+                    <h2 class="obtain">货架操作<i></i></h2>
+                    <div class="secondary">
+                        <h3>查看货架</h3>
+                        <h3>增加货架</h3>
+                    </div>
+                </li>
+                <li>
+                    <h2 class="obtain">查询<i></i></h2>
+                    <div class="secondary">
+                        <h3>搜索药品</h3>
+                        <h3>搜索即将过期药品</h3>
+                    </div>
+                </li>
+                <li>
+                    <h2 class="obtain">登录操作<i></i></h2>
+                    <div class="secondary">
+                        <h3>注销</h3>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="content">
+   
+</div>
+
+<script src="js/menu.js"></script> <!--控制js-->
+
+</body>
+</html>

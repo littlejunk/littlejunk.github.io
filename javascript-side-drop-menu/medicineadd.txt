@@ -1,0 +1,16 @@
+<div id="medicineadd">
+    <h1>增加药品</h1>
+    <form action="med.do?type=add" method="post">
+      名称：<input type="text" name="medName" id="medName"><br>
+       价格：<input type="text" name="medPrice" id="medPrice" ><br>
+       数量：<input type="text" name="medNum" id="medNum" ><br>
+       保质期至：<input type="date" name="sheLife" id="sheLife" ><br>
+       生产商：<input type="text" name="production" id="production" ><br>
+     药品货架：<select name="sheId">
+          <c:forEach items="${shelves}" var="s">
+           <option  value="${s.sheId}" >${s.sheName}剩余容量：${s.sheCurrentCap}</option>
+          </c:forEach>
+          </select><br>
+         <input type="button" value="提交" onclick="medicineaddsub()">
+    </form>
+   </div>

@@ -1,0 +1,22 @@
+<div id="medicineupdate">
+        <h1>修改药品信息</h1>
+    <form action="med.do?type=update" method="post">
+      药品编号：<input type="text"   readonly="on"  value="${medicine.medId}"><br>
+       名称：<input type="text"   readonly="on"  id="medName" value="${medicine.medName}"><br>
+        价格：<input type="text"  id="medPrice" value="${medicine.medPrice}"><br>
+        数量：<input type="text" id="medNum" value="${medicine.medNum}"><br>
+      货架：<select id="sheId">
+           <c:forEach items="${shelves}" var="c">
+           <c:choose>
+              <c:when test="${c.sheId==medicine.sheId}">
+                 <option selected value="${c.sheId}" >${c.sheName}剩余容量${c.sheCurrentCap}</option>
+              </c:when>
+              <c:otherwise>
+                  <option value="${c.sheId}" >${c.sheName}剩余容量${c.sheCurrentCap}</option>
+              </c:otherwise>
+            </c:choose>
+           </c:forEach>
+           </select><br>
+          <input type="button" value="提交" onclick="medicineupdatesub()">
+     </form>
+    </div>

@@ -1,0 +1,8 @@
+ <div id="shelveupdate">
+     <h1>修改货架</h1>
+     <form action="she.do?type=update" method="post">
+             货架编号：<input type="text"  name="sheId" readonly="on" id="sheId" value="${shelve.sheId}"/><br>
+    	货架名称：<input type="text" name="sheName" id="sheName" value="${shelve.sheName}"/> <br>
+    	<input type="submit"/> <input type="reset"/><br>
+    </form>
+    </div>

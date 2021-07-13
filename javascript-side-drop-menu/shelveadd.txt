@@ -1,0 +1,8 @@
+ <div id="shelveadd">
+    <h1>增加货架</h1>
+    <form action="she.do?type=add" method="post">
+    	货架名称：<input type="text" name="sheName" id="sheName"/> <br>
+              货架容量：<input type="text" name="sheCap" id="sheCap"/>
+    	<input  type="button" value="提交" onclick="shelveaddsub()"/> <input type="reset"/><br>
+    </form>
+   </div>

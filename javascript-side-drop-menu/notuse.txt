@@ -1,0 +1,22 @@
+<div id="notuse">
+    <div style="text-align: center; font-weight: bolder; color: red;">
+        以下药品将在三个月内过期，建议进行处理
+    </div>
+  <div style="margin-left: 220px;">
+  <form action="med.do?type=delnotuse" method="post">
+  <table id="ntable">
+      <tr>
+          <td>编号</td>
+          <td>名称</td>
+          <td>价格</td>
+          <td>数量</td>
+          <td>货架</td>
+          <td>保质期至</td>
+          <td>是否删除</td>
+      </tr>
+   <br>
+   </table>
+   <input style="margin-top: 20px; margin-left: 320px;  width: 100px; height: 40px;" type="button" value="删除" onclick="sub()">
+  </form>
+  </div>
+ </div>

@@ -1,0 +1,20 @@
+  <div id="shelve">
+        <table>
+            <tr>
+              <i><td>货架编号</td>
+               <td>货架名称</td>
+                  <td>容量</td>
+                  <td>剩余容量</td></i>
+            </tr>
+         <c:forEach items="${list1}" var="s">
+             <tr>
+               <td>${s.sheId}</td>
+               <td>${s.sheName}</td>
+               <td>${s.sheCap}</td>
+               <td>${s.sheCurrentCap}</td>
+               <td><a href="javascript:if(confirm('是否删除？将会把该货架所有药品删除')){location.href='she.do?type=del&sheId=${s.sheId}'}">删除</a></td>
+               <td><a href="she.do?type=findById&sheId=${s.sheId}">修改</a></td>
+           </tr>
+         </c:forEach>
+       </table>
+    </div>
