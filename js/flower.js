@@ -25,7 +25,7 @@
     var body = document.body;
     body.insertBefore(snow, body.lastChild);
 }
-for (var i = 0; i < 100; i++) {
+for (var i = 0; i < 20; i++) {
     creatdiv(i);
 }
 function show(div) {
@@ -68,7 +68,7 @@ function show(div) {
     }
 
 }
-for (var i = 0; i <100; i++) {
+for (var i = 0; i <20; i++) {
     var div = document.getElementById('img' + i);
     show(div);
 }
