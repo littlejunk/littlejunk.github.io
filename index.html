@@ -12,30 +12,69 @@
                 width:100%;
                 height:100%;
             }
-            a{
+            .select{
+                background-color: rgb(77, 77, 238);
+            }
+            .button{
+                width: 50%;
+                height: 10%;
+                margin-left: 25%;
                 display: block;
+                padding-top: 3%;
                 margin-top: 50px;
                 text-align: center;
-                color: rgb(246, 46, 152);
-                font-size: medium;
+                color: rgb(11, 9, 10);
+                font-size: 20px;
+                border: 2px solid black;
+            }
+            #result{
+                width: 50%;
+                height: 10%;
+                margin-left: 25%;
+                display: block;
+                padding-top: 3%;
+                margin-top: 50px;
+                text-align: center;
+                color: rgb(31, 186, 7);
+                font-size: 50px;
+                border: 2px solid black;
+                z-index: 999999;
             }
         </style>
     </head>
     <body>
-        <a href="player.html">视频链接播放器</a>
-       
-        <a href="http://91porn.com">ninty-one</a>
-        
-        <a href="http://jable.tv">jable-tv</a>
-        
-        <a href="http://bb9711.com">7mmtv</a>
-       
-        <a href="http://javdb.com">javdb</a>
-        
-        <a href="http://javbus.com">javbus</a>
-
-        <a href="/myplayer.html">视频</a>
-        
+        <div id="tx" class="button">
+            汀臭园
+            <input class="txs" type="hidden" value="鱼粉">
+            <input class="txs" type="hidden" value="豆花">
+            <input class="txs" type="hidden" value="肯贝基">
+            <input class="txs" type="hidden" value="饭团">
+            <input class="txs" type="hidden" value="韩式拌饭">
+        </div>
+        <div id="gy" class="button">
+            甘饴园
+            <input class="gys" type="hidden" value="一楼大众">
+            <input class="gys" type="hidden" value="一楼炒饭">
+            <input class="gys" type="hidden" value="一楼牛肉粉">
+            <input class="gys" type="hidden" value="一楼粉">
+            <input class="gys" type="hidden" value="一楼饼">
+            <input class="gys" type="hidden" value="一楼粥">
+            <input class="gys" type="hidden" value="二楼大众">
+            <input class="gys" type="hidden" value="二楼瓦罐汤">
+            <input class="gys" type="hidden" value="二楼米线">
+            <input class="gys" type="hidden" value="二楼麻辣香锅">
+            <input class="gys" type="hidden" value="二楼麻辣烫">
+            <input class="gys" type="hidden" value="二楼铁板">
+            <input class="gys" type="hidden" value="二楼饺子">
+            <input class="gys" type="hidden" value="三楼螺蛳粉">
+            <input class="gys" type="hidden" value="三楼蒸菜">
+            <input class="gys" type="hidden" value="三楼肯贝基">
+        </div>
+        <div id="result">
+            开始随机选取
+        </div>
     </body>
     <script src="js/flower.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/eat.js"></script>
 </html>
